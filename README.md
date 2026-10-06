@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marka
 
-## Getting Started
+Editor de Markdown no navegador, uma mistura de Google Docs e Notion. Sem login: tudo fica salvo no `localStorage`.
 
-First, run the development server:
+## Funcionalidades
+
+- **Importar** arquivos `.md` (botão, ou arrastar e soltar na janela)
+- **Criar** documentos do zero, renomear, duplicar e excluir
+- **Editar** com WYSIWYG (Tiptap/ProseMirror) e sincronização em Markdown
+- **Slash commands** estilo Notion: digite `/` para títulos, listas, tarefas, citação, código, tabela, imagem e divisor
+- **Toolbar** estilo Google Docs: desfazer/refazer, tipo de bloco, negrito, itálico, sublinhado, tachado, código, destaque, link, alinhamento, listas, tabela e imagem
+- **Exportar** para PDF (impressão do navegador), DOCX (`docx`) e Markdown
+- Tema claro e escuro, layout responsivo
+
+## Atalhos
+
+| Ação | Atalho |
+| --- | --- |
+| Exportar Markdown | Ctrl + S |
+| Exportar PDF | Ctrl + P |
+| Novo documento | Ctrl + Alt + N |
+| Mostrar/ocultar painel | Ctrl + \ |
+| Menu de blocos | `/` |
+
+## Rodando
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js 16 (App Router), React 19, Tailwind CSS 4, Tiptap 3 com `@tiptap/markdown`, `docx`, `lucide-react`.
