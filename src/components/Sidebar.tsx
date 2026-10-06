@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import type { Doc, Theme } from "@/lib/types";
 import { Menu, MenuItem, MenuSeparator } from "./ui/Menu";
+import { BrandLogo } from "./BrandLogo";
 
 type Props = {
   docs: Doc[];
@@ -75,12 +76,7 @@ export function Sidebar({
   return (
     <aside className="no-print flex h-full w-72 shrink-0 flex-col border-r border-border bg-surface-2/60">
       <div className="flex items-center justify-between px-4 pb-2 pt-4">
-        <div className="flex items-center gap-2">
-          <span className="grid h-7 w-7 place-items-center rounded-lg bg-fg text-accent-fg">
-            <FileText size={15} strokeWidth={2} />
-          </span>
-          <span className="text-sm font-semibold tracking-tight">Marka</span>
-        </div>
+        <BrandLogo className="h-8 w-auto shrink-0 text-fg" />
         <button
           type="button"
           onClick={onToggleTheme}
